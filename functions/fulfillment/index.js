@@ -5,6 +5,7 @@ const handleRequestMobile = require('./request-mobile');
 const handleFindLocation = require('./find-location');
 
 function handler(request, response) {
+    console.log('A',request);
     const agent = new df.WebhookClient({ request, response });
     // console.log('Dialogflow Request headers: ' + JSON.stringify(request.headers));
     // console.log('Dialogflow Request body: ' + JSON.stringify(request.body));
@@ -17,6 +18,4 @@ function handler(request, response) {
     agent.handleRequest(intentMap);
 }
 
-module.exports = {
-    handler,
-}
+module.exports = handler;
