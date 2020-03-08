@@ -1,0 +1,6 @@
+node_modules/
+service-account-key.json
+config.json
+firebase.json
+.firebaserc
+firestore.*
